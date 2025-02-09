@@ -1,0 +1,89 @@
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.skills_title{
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+}
+.skills_container{
+    width: 70%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* border-radius: 50%; */
+    background: repeating-radial-gradient(rgba(0,0,0,0.4) 2px, var(--body-color) 5px,var(--body-color) 100px);
+}
+.skills_item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 500;
+    background-color: #000;
+    color: white;
+    padding: 1.5rem;
+    box-shadow: #000;
+    cursor: pointer;
+    position: absolute;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+    .skills_container{
+        width: 70%;
+        height: 50vh;
+        background: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px, var(--body-color) 7px, var(--body-color) 65px);
+    }
+    .skills_item{
+        padding: .8rem;
+        font-weight: 400;
+    }
+   }
+   
+   /* For medium devices */
+   @media screen and (max-width: 768px) {
+    .skills_container{
+        width: 70%;
+        height: 40vh;
+        background: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px, var(--body-color) 7px, var(--body-color) 55px);
+    }
+   }
+   
+   @media screen and (max-width: 596px) {
+    .skills_container{
+        width: 70%;
+        height: 40vh;
+        background: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px, var(--body-color) 7px, var(--body-color) 50px);
+    }
+    .skills_item{
+        padding: .6rem;
+        font-weight: 300;
+        font-size: 12px;
+        
+    }
+   }
+   
+   /* For small devices */
+   @media screen and (max-width: 410px) {
+    .skills_container{
+        width: 70%;
+        height: 30vh;
+        background: repeating-radial-gradient(rgba(0, 0, 0, 0.4) 2px, var(--body-color) 7px, var(--body-color) 35px);
+    }
+    .skills_item{
+        padding: .4rem;
+        font-weight: 300;
+        font-size: 10px;
+        
+    }
+     
+   }
+   
