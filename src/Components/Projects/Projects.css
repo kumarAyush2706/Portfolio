@@ -1,0 +1,368 @@
+/* =============== PROJECTS SECTION =============== */
+.projects {
+  position: relative;
+}
+
+.projects_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.projects_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+/* =============== PROJECT CARD =============== */
+.project_card {
+  background: var(--container-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  animation: fadeInUp 0.8s ease-out both;
+  cursor: pointer;
+}
+
+.project_card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--title-color);
+}
+
+.project_card.active {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* =============== PROJECT IMAGE =============== */
+.project_image_container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project_card:hover .project_image {
+  transform: scale(1.1);
+}
+
+/* =============== PROJECT OVERLAY =============== */
+.project_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.project_card:hover .project_overlay {
+  opacity: 1;
+}
+
+/* =============== PROJECT LINKS =============== */
+.project_links {
+  display: flex;
+  gap: 1rem;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.project_card:hover .project_links {
+  transform: translateY(0);
+}
+
+.project_link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--title-color);
+  color: var(--container-color);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.project_link:hover {
+  background: var(--title-color-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.github_link {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--title-color);
+}
+
+.github_link:hover {
+  background: rgba(255, 255, 255, 1);
+  color: var(--title-color-dark);
+}
+
+.project_icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.project_link:hover .project_icon {
+  transform: scale(1.1);
+}
+
+/* =============== PROJECT CATEGORY =============== */
+.project_category {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--title-color);
+  color: var(--container-color);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  backdrop-filter: blur(10px);
+  animation: slideInRight 0.6s ease-out 0.3s both;
+}
+
+/* =============== PROJECT CONTENT =============== */
+.project_content {
+  padding: 2rem;
+}
+
+.project_title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: 1rem;
+  font-weight: var(--font-semi-bold);
+  transition: color 0.3s ease;
+}
+
+.project_card:hover .project_title {
+  color: var(--title-color-dark);
+}
+
+.project_description {
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+/* =============== TECHNOLOGY TAGS =============== */
+.project_technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technology_tag {
+  background: linear-gradient(135deg, var(--title-color), var(--title-color-dark));
+  color: var(--container-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-medium);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.technology_tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =============== ANIMATIONS =============== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =============== RESPONSIVE DESIGN =============== */
+@media screen and (max-width: 992px) {
+  .projects_grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project_content {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects_grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .project_image_container {
+    height: 200px;
+  }
+  
+  .project_links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .project_link {
+    padding: 0.6rem 1.2rem;
+    font-size: var(--smaller-font-size);
+  }
+  
+  .project_content {
+    padding: 1.25rem;
+  }
+  
+  .project_title {
+    font-size: var(--h3-font-size);
+  }
+  
+  .project_description {
+    font-size: var(--small-font-size);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .projects_container {
+    padding: 0 0.5rem;
+  }
+  
+  .project_card {
+    border-radius: 0.75rem;
+  }
+  
+  .project_image_container {
+    height: 180px;
+  }
+  
+  .project_content {
+    padding: 1rem;
+  }
+  
+  .project_technologies {
+    gap: 0.4rem;
+  }
+  
+  .technology_tag {
+    padding: 0.3rem 0.6rem;
+    font-size: var(--tiny-font-size);
+  }
+}
+
+/* =============== HOVER EFFECTS =============== */
+.project_card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--title-color), var(--title-color-dark));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.project_card:hover::before {
+  transform: scaleX(1);
+}
+
+/* =============== LOADING ANIMATION =============== */
+.project_card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.project_card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.project_card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+/* =============== ACCESSIBILITY =============== */
+@media (prefers-reduced-motion: reduce) {
+  .project_card,
+  .project_image,
+  .project_overlay,
+  .project_links,
+  .technology_tag {
+    transition: none;
+  }
+  
+  .project_card:hover {
+    transform: none;
+  }
+  
+  .project_card:hover .project_image {
+    transform: none;
+  }
+}
+
+/* =============== DARK MODE SUPPORT =============== */
+@media (prefers-color-scheme: dark) {
+  .project_card {
+    background: var(--container-color);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .project_overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 50%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+  }
+  
+  .github_link {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--container-color);
+  }
+  
+  .github_link:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+} 

@@ -1,12 +1,14 @@
 import React from 'react'
 import './About.css'
 import AboutImg from "../../assets/about1.jpg";
-import CV from "../../assets/resume - Ayush.pdf"
+import CV from "../../assets/Ayush_resume.pdf"
 import Info from './Info';
+import BackgroundAnimation from '../BackgroundAnimation/BackgroundAnimation';
 
 const About = () => {
   return (
     <section className="about section" id="about">
+        <BackgroundAnimation />
         <div className="title_container">
         <h2 className="section_title">About Me  </h2>
             <span className="section_subtitle">
