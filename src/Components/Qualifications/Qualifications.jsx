@@ -37,7 +37,7 @@ const Qualifications = () => {
                         <span className="qualification_line"></span>
                     </div>
                     <div>
-                        <h3 className="qualification_title">Bachlor of Computer Application </h3>
+                        <h3 className="qualification_title">Bachelor of Computer Application </h3>
                         <span className="qualification_subtitle">
                         Munger university 
                             </span>
@@ -55,7 +55,7 @@ const Qualifications = () => {
                             Science stream  
                             </span>
                             <div className="qualification_calender">
-                                <i className="uil uil-calender"></i>20219 - 2021
+                                <i className="uil uil-calender"></i>2019 - 2021
                             </div>
                     </div>
                     <div>
@@ -71,7 +71,7 @@ const Qualifications = () => {
                         <span className="qualification_line"></span>
                     </div>
                     <div>
-                        <h3 className="qualification_title"> Matricualtion</h3>
+                        <h3 className="qualification_title"> Matriculation</h3>
                         <span className="qualification_subtitle">
                             Science stream   
                             </span>

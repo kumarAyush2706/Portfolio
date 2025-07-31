@@ -178,5 +178,8 @@
         width: 22px;
         height: 22px;
     }
+    .home_data{
+        max-width: 300px;
+    }
   }
   
